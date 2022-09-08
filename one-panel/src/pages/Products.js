@@ -36,36 +36,37 @@ export default function Products() {
 	}, [])
 
 	return (
-		<div>
-			<h1>Products</h1>
-			<ul>
+		<div className="space-x-4">
+			<h1 className=" text-3xl flex justify-center">Products</h1>
+			<h6>Item    Price    Stock</h6>
+			<ul >
 				{products.map(product => (
-					<li>
-						{product.title}		{product.price} 	{product.stock}
+					<li className="border flex gap-3" >
+						{product.title}{"    "}{product.price} 	{product.stock}
 					</li>
 					
 				))}
 			</ul>
 		<form onSubmit={submitHandler}>
-			<div>
-				<label>
+			<div className=" mt-10">
+				<label className="font-semibold flex justify-center p-2">
 					Title
 					<input type="text" name="title" />
 				</label>
 			</div>
 			<div>
-				<label>
+				<label className="font-semibold flex justify-center p-2">
 					Price
 					<input type="text" name="price" />
 				</label>
 			</div>
 			<div>
-				<label>
+				<label className="font-semibold flex justify-center p-2">
 					Stock
 					<input type="text" name="stock" />
 				</label>
 			</div>
-			<button type="submit">Add</button>
+			<button type="submit" className="font-black bg-amber-400 drop-shadow-lg">Add</button>
 		</form>
 		</div>
 		

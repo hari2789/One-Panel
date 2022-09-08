@@ -14,8 +14,8 @@ export default function Layout() {
 	return (
 		<div>
 			
-			<nav className='flex sm:justify-center space-x-4 '>	
-				<menu className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
+			<nav className='flex sm:justify-center'>	
+				<menu className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900 space-y-4">
 					<li>
 						<Link to="/">Home</Link>
 					</li>

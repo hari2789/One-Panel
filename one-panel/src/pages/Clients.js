@@ -17,10 +17,11 @@ export default function Clients() {
 
 	return (
 		<div>
-			<h1>Clients</h1>
+			<h1 className="font-bold text-2xl">Clients</h1>
+			<h5 className="font-medium flex justify-center text-xl">Navn ---- adresse ----  mail ---- tele</h5>
 			<ul>
 				{clients.map(client => (
-					<li>
+					<li className="border flex justify-center">
 						{client.name} 	{client.adresse} 	{client.mail} 	{client.tlf}
 					</li>
 					
