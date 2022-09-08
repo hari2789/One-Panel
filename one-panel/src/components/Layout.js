@@ -8,13 +8,14 @@ export default function Layout() {
 
 	function signout() {
 		setToken(null)
-		window.location.href("/")
+		window.location.href("/signin")
 	}
 
 	return (
 		<div>
-			<nav>
-				<menu>
+			
+			<nav className='flex sm:justify-center space-x-4 '>	
+				<menu className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900">
 					<li>
 						<Link to="/">Home</Link>
 					</li>
@@ -31,7 +32,7 @@ export default function Layout() {
 						<button onClick={signout}>Sign out</button>
 					</li>
 				</menu>
-			</nav>
+				</nav>
 			<main>
 				<Outlet />
 			</main>
