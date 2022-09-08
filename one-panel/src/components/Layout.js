@@ -22,6 +22,12 @@ export default function Layout() {
 						<Link to="/products">Products</Link>
 					</li>
 					<li>
+					<Link to="/clients">Clients</Link>
+					</li>
+					<li>
+					<Link to="/orders">Orders</Link>
+					</li>			
+					<li>
 						<button onClick={signout}>Sign out</button>
 					</li>
 				</menu>

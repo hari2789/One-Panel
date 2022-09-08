@@ -1,8 +1,8 @@
 import { useEffect, useState, useContext } from "react"
 import TokenContext from "../TokenContext"
 
-export default function Products() {
-	const [products, setProducts] = useState([])
+export default function Clients() {
+	const [clients, setClients] = useState([])
 	const { token } = useContext(TokenContext)
 
 	useEffect(function() {
@@ -12,16 +12,16 @@ export default function Products() {
 			}
 		})
 			.then(res => res.json())
-			.then(data =>{ console.log(data.db.products); setProducts(data.db.products)})
+			.then(data =>{ console.log(data.db.clients); setClients(data.db.clients)})
 	}, [])
 
 	return (
 		<div>
-			<h1>Products</h1>
+			<h1>Clients</h1>
 			<ul>
-				{products.map(product => (
+				{clients.map(client => (
 					<li>
-						{product.title}		{product.price} 	{product.stock}
+						{client.name} 	{client.adresse} 	{client.mail} 	{client.tlf}
 					</li>
 					
 				))}
